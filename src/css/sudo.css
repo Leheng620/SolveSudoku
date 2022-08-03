@@ -1,0 +1,186 @@
+html{
+    min-height: 100%;
+}
+body {
+    background-image: linear-gradient(to top,#ff7f2b26,#8976f11f);
+    background-repeat: no-repeat;
+    
+    /*Make the window smaller and when overflow occur, linear gradient continue as the overflow is in body*/
+    background-attachment: fixed; 
+    min-height: 100%;
+    position: absolute;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block；
+}
+
+input[type=text]:focus{
+    outline:none;
+}
+button[disabled]{
+    background-color: grey;
+    cursor: default;
+}
+button[disabled]:hover{
+    box-shadow: none;
+    opacity: 1;
+}
+
+/* the whole page  */
+.panels{
+    float: left;
+}
+.controls{
+    width: 30%;
+    height: 35vw;
+}
+#main-container{
+    position: absolute;
+    top:6%;
+    text-align: center;
+}
+/* #bg{
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+}
+#bg,#background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+} */
+
+/* no solution */
+#block{
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    left: 5%;
+}
+#message{
+    width: 20%;
+    text-align: center;
+    opacity: 1;
+    background-color: #e8b6b6eb;
+    float: left;
+    left: 37%;
+    position: relative;
+    top: 20%;
+    border: solid;
+    border-color: red;
+}
+
+/* 81 grids */
+#sudo_container{
+    display: grid;
+    padding: 1.5% 2.2% 1.5% 2%;
+    height: 35vw;
+    width: 35%;
+    left: 32%;
+    top: 7%;
+    background-color: aliceblue;
+    /* grid-template-columns: 11.111% 11.111% 11.111% 11.111% 11.111% 11.111% 11.111% 11.111% 11.111%;
+    grid-template-rows: 11.111% 11.111% 11.111% 11.111% 11.111% 11.111% 11.111% 11.111% 11.111%; */
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+}
+.grid-item{
+    width:100%;
+    height: 100%;
+}
+.grid-input{
+    height: 100%;
+    width:100%;
+    padding:0;
+    border:none;
+    text-align: center;
+    border: solid;
+    border-color: #5f63a04f;
+}
+.grid-bottom-border{
+    /* border-bottom:solid; */
+    border-bottom-color: black;
+}
+.grid-top-border{
+    /* border-top:solid; */
+    border-top-color: black;
+}
+.grid-left-border{
+    /* border-left:solid; */
+    border-left-color:black;
+}
+.grid-right-border{
+    /* border-right:solid; */
+    border-right-color: black;
+}
+
+
+
+/* controls */
+.controls-container{
+    position: relative;
+}
+.left-ad-container{
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+#right-button-container{
+    display: grid;
+    width: 50%;
+    padding-left: 10%;
+}
+#error-message{
+    padding-top: 10%;
+    text-align: left;
+    padding-left: 10%;
+    color: red;
+}
+.control-button{
+    width: 60%;
+    line-height: 200%;
+    cursor: pointer;
+    border: none;
+    background-color: #54c46b;
+    color: #fffdeb;
+    transition-duration: 0.4s;
+}
+.control-button:hover{
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24), 0 7px 10px 0 rgba(0,0,0,0.19);
+    opacity: 0.7;
+}
+.control-button:active{
+    background: black;
+    transition: all 0.8s;
+    opacity: 1;
+    outline: none;
+}
+.control-slider{
+    cursor: pointer;
+    background: #888686;
+    -webkit-appearance: none;
+    height: 13%;
+    border-radius: 5px;
+    outline: none;
+}
+.control-slider:focus{
+    border-color: none;
+    outline: none;
+}
+.control-slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #c8a21f;
+}
